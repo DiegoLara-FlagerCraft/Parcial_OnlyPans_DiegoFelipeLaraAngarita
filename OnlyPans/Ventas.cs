@@ -50,12 +50,20 @@ namespace OnlyPans
 
         private void button2_Click(object sender, EventArgs e)
         {
-            richTextRegistro.Text += "REGISTRO \n" + "FECHA: " + DateTimeFecha.Text + "\n" + "HORA: " + TxtHoraR.Text + "\n" + "NOMBRE CLIENTE: " + TxtBoxNombreCliente.Text + "\n" + "CEDULA: " + TxtBoxCedula.Text + "\n"
-                + "TIPO DE PAN: " + comboBoxPanes.Text + "\n" + "CANTIDAD: " + NumericCantidad.Value + "\n" + "TOTAL: " + TextBoxTotal.Text + "\n" + "---------------------------------------------" + "\n";
+            if (richTextProductos.Text == "    " || NumericCantidad.Value == 0)
+            {
+                MessageBox.Show("Valores incorrectos en el TIPO DE PAN o CANTIDAD");
+            }
 
-            richTextProductos.Text += comboBoxPanes.Text + "\n";
+            else
+            {
+                richTextRegistro.Text += "REGISTRO \n" + "FECHA: " + DateTimeFecha.Text + "\n" + "HORA: " + TxtHoraR.Text + "\n" + "NOMBRE CLIENTE: " + TxtBoxNombreCliente.Text + "\n" + "CEDULA: " + TxtBoxCedula.Text + "\n"
+                                    + "TIPO DE PAN: " + comboBoxPanes.Text + "\n" + "CANTIDAD: " + NumericCantidad.Value + "\n" + "TOTAL: " + TextBoxTotal.Text + "\n" + "---------------------------------------------" + "\n";
 
-            richTextBoxTotalVentas.Text = "EL TOTAL DE LAS VENTAS ES: $" + TotalVentas;
+                richTextProductos.Text += comboBoxPanes.Text + "\n";
+
+                richTextBoxTotalVentas.Text = "EL TOTAL DE LAS VENTAS ES: $" + TotalVentas;
+            }
         }
 
         private void BtnBorrar_Click(object sender, EventArgs e)

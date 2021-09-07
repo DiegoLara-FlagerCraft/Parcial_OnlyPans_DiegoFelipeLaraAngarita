@@ -181,8 +181,7 @@ namespace OnlyPans
             this.comboBoxPanes.Items.AddRange(new object[] {
             "ALIÑADO",
             "NO ALIÑADO",
-            "ESPECIAL",
-            ""});
+            "ESPECIAL"});
             this.comboBoxPanes.Location = new System.Drawing.Point(263, 285);
             this.comboBoxPanes.Name = "comboBoxPanes";
             this.comboBoxPanes.Size = new System.Drawing.Size(241, 25);
