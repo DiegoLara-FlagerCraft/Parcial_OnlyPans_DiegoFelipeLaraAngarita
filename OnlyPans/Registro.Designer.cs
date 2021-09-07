@@ -33,7 +33,7 @@ namespace OnlyPans
             this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.TxtTitilo = new System.Windows.Forms.Label();
             this.TxtRegistro = new System.Windows.Forms.Label();
-            this.richTextRegistro = new System.Windows.Forms.RichTextBox();
+            this.RtextRegistro = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,13 +71,13 @@ namespace OnlyPans
             this.TxtRegistro.TabIndex = 22;
             this.TxtRegistro.Text = "REGISTRO";
             // 
-            // richTextRegistro
+            // RtextRegistro
             // 
-            this.richTextRegistro.Location = new System.Drawing.Point(277, 155);
-            this.richTextRegistro.Name = "richTextRegistro";
-            this.richTextRegistro.Size = new System.Drawing.Size(341, 464);
-            this.richTextRegistro.TabIndex = 23;
-            this.richTextRegistro.Text = "";
+            this.RtextRegistro.Location = new System.Drawing.Point(277, 155);
+            this.RtextRegistro.Name = "RtextRegistro";
+            this.RtextRegistro.Size = new System.Drawing.Size(341, 464);
+            this.RtextRegistro.TabIndex = 23;
+            this.RtextRegistro.Text = "";
             // 
             // Registro
             // 
@@ -85,7 +85,7 @@ namespace OnlyPans
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(824, 631);
-            this.Controls.Add(this.richTextRegistro);
+            this.Controls.Add(this.RtextRegistro);
             this.Controls.Add(this.TxtRegistro);
             this.Controls.Add(this.TxtTitilo);
             this.Controls.Add(this.PictureBoxLogo);
@@ -102,6 +102,6 @@ namespace OnlyPans
         private System.Windows.Forms.PictureBox PictureBoxLogo;
         private System.Windows.Forms.Label TxtTitilo;
         private System.Windows.Forms.Label TxtRegistro;
-        private System.Windows.Forms.RichTextBox richTextRegistro;
+        public System.Windows.Forms.RichTextBox RtextRegistro;
     }
 }

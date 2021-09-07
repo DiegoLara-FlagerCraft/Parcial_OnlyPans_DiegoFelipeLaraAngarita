@@ -29,6 +29,7 @@ namespace OnlyPans
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventas));
             this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.TxtTitilo = new System.Windows.Forms.Label();
@@ -53,6 +54,7 @@ namespace OnlyPans
             this.TxtRegistro = new System.Windows.Forms.Label();
             this.BtnBorrar = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.Hora = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericCantidad)).BeginInit();
             this.SuspendLayout();
@@ -263,7 +265,7 @@ namespace OnlyPans
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(165, 38);
             this.button2.TabIndex = 19;
-            this.button2.Text = "REGISTRAR";
+            this.button2.Text = "VENDER";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -312,6 +314,11 @@ namespace OnlyPans
             this.button3.Text = "CERRAR SESIÓN";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // Hora
+            // 
+            this.Hora.Enabled = true;
+            this.Hora.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
             // Ventas
             // 
@@ -376,5 +383,6 @@ namespace OnlyPans
         private System.Windows.Forms.Label TxtRegistro;
         private System.Windows.Forms.Button BtnBorrar;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Timer Hora;
     }
 }

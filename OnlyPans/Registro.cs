@@ -16,5 +16,10 @@ namespace OnlyPans
         {
             InitializeComponent();
         }
+        public Registro(String text)
+        {
+            InitializeComponent();
+            RtextRegistro.Text = text;
+        }
     }
 }
