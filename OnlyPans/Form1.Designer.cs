@@ -152,8 +152,8 @@ namespace OnlyPans
             this.TxtUsuYContra.Name = "TxtUsuYContra";
             this.TxtUsuYContra.Size = new System.Drawing.Size(230, 140);
             this.TxtUsuYContra.TabIndex = 9;
-            this.TxtUsuYContra.Text = "USUARIOS Y CONTRASEÑAS\r\n\r\nAdmin: A1234\r\nErika: E569\r\nNathalia: N458\r\nDaniela: D18" +
-    "7\r\nPersefone: P0510";
+            this.TxtUsuYContra.Text = "USUARIOS Y CONTRASEÑAS\r\n\r\nAdmin - A1234\r\nErika - E569\r\nNathalia - N458\r\nDaniela -" +
+    " D187\r\nPersefone - P0510";
             // 
             // HOME
             // 
