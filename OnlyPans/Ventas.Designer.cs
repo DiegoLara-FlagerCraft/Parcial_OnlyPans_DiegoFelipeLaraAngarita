@@ -55,6 +55,11 @@ namespace OnlyPans
             this.BtnBorrar = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.Hora = new System.Windows.Forms.Timer(this.components);
+            this.TxtPrecios = new System.Windows.Forms.Label();
+            this.TxtProductosVendidos = new System.Windows.Forms.Label();
+            this.richTextProductos = new System.Windows.Forms.RichTextBox();
+            this.TxtTotalVentas = new System.Windows.Forms.Label();
+            this.richTextBoxTotalVentas = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericCantidad)).BeginInit();
             this.SuspendLayout();
@@ -163,7 +168,7 @@ namespace OnlyPans
             this.TxtPanes.BackColor = System.Drawing.Color.Transparent;
             this.TxtPanes.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPanes.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.TxtPanes.Location = new System.Drawing.Point(68, 304);
+            this.TxtPanes.Location = new System.Drawing.Point(67, 281);
             this.TxtPanes.Name = "TxtPanes";
             this.TxtPanes.Size = new System.Drawing.Size(186, 33);
             this.TxtPanes.TabIndex = 10;
@@ -178,7 +183,7 @@ namespace OnlyPans
             "NO ALIÑADO",
             "ESPECIAL",
             ""});
-            this.comboBoxPanes.Location = new System.Drawing.Point(264, 308);
+            this.comboBoxPanes.Location = new System.Drawing.Point(263, 285);
             this.comboBoxPanes.Name = "comboBoxPanes";
             this.comboBoxPanes.Size = new System.Drawing.Size(241, 25);
             this.comboBoxPanes.TabIndex = 11;
@@ -189,7 +194,7 @@ namespace OnlyPans
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label3.Location = new System.Drawing.Point(530, 304);
+            this.label3.Location = new System.Drawing.Point(529, 281);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 33);
             this.label3.TabIndex = 12;
@@ -218,7 +223,7 @@ namespace OnlyPans
             // NumericCantidad
             // 
             this.NumericCantidad.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumericCantidad.Location = new System.Drawing.Point(679, 308);
+            this.NumericCantidad.Location = new System.Drawing.Point(678, 285);
             this.NumericCantidad.Name = "NumericCantidad";
             this.NumericCantidad.Size = new System.Drawing.Size(120, 25);
             this.NumericCantidad.TabIndex = 15;
@@ -229,7 +234,7 @@ namespace OnlyPans
             this.TxtTotal.BackColor = System.Drawing.Color.Transparent;
             this.TxtTotal.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTotal.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.TxtTotal.Location = new System.Drawing.Point(244, 387);
+            this.TxtTotal.Location = new System.Drawing.Point(243, 364);
             this.TxtTotal.Name = "TxtTotal";
             this.TxtTotal.Size = new System.Drawing.Size(147, 33);
             this.TxtTotal.TabIndex = 16;
@@ -238,7 +243,7 @@ namespace OnlyPans
             // TextBoxTotal
             // 
             this.TextBoxTotal.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxTotal.Location = new System.Drawing.Point(397, 392);
+            this.TextBoxTotal.Location = new System.Drawing.Point(396, 369);
             this.TextBoxTotal.Name = "TextBoxTotal";
             this.TextBoxTotal.Size = new System.Drawing.Size(247, 25);
             this.TextBoxTotal.TabIndex = 17;
@@ -248,7 +253,7 @@ namespace OnlyPans
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(204, 462);
+            this.button1.Location = new System.Drawing.Point(203, 439);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 38);
             this.button1.TabIndex = 18;
@@ -261,7 +266,7 @@ namespace OnlyPans
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button2.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(414, 462);
+            this.button2.Location = new System.Drawing.Point(413, 439);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(165, 38);
             this.button2.TabIndex = 19;
@@ -273,7 +278,7 @@ namespace OnlyPans
             // 
             this.richTextRegistro.Location = new System.Drawing.Point(837, 130);
             this.richTextRegistro.Name = "richTextRegistro";
-            this.richTextRegistro.Size = new System.Drawing.Size(311, 489);
+            this.richTextRegistro.Size = new System.Drawing.Size(311, 193);
             this.richTextRegistro.TabIndex = 20;
             this.richTextRegistro.Text = "";
             // 
@@ -283,18 +288,18 @@ namespace OnlyPans
             this.TxtRegistro.BackColor = System.Drawing.Color.Transparent;
             this.TxtRegistro.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtRegistro.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.TxtRegistro.Location = new System.Drawing.Point(918, 94);
+            this.TxtRegistro.Location = new System.Drawing.Point(927, 94);
             this.TxtRegistro.Name = "TxtRegistro";
-            this.TxtRegistro.Size = new System.Drawing.Size(166, 33);
+            this.TxtRegistro.Size = new System.Drawing.Size(145, 33);
             this.TxtRegistro.TabIndex = 21;
-            this.TxtRegistro.Text = "REGISTRO";
+            this.TxtRegistro.Text = "PEDIDOS";
             // 
             // BtnBorrar
             // 
             this.BtnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BtnBorrar.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBorrar.ForeColor = System.Drawing.Color.White;
-            this.BtnBorrar.Location = new System.Drawing.Point(618, 462);
+            this.BtnBorrar.Location = new System.Drawing.Point(617, 439);
             this.BtnBorrar.Name = "BtnBorrar";
             this.BtnBorrar.Size = new System.Drawing.Size(165, 38);
             this.BtnBorrar.TabIndex = 22;
@@ -307,7 +312,7 @@ namespace OnlyPans
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button3.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(279, 525);
+            this.button3.Location = new System.Drawing.Point(278, 502);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(434, 38);
             this.button3.TabIndex = 23;
@@ -320,12 +325,67 @@ namespace OnlyPans
             this.Hora.Enabled = true;
             this.Hora.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
+            // TxtPrecios
+            // 
+            this.TxtPrecios.AutoSize = true;
+            this.TxtPrecios.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPrecios.Location = new System.Drawing.Point(-5, 502);
+            this.TxtPrecios.Name = "TxtPrecios";
+            this.TxtPrecios.Size = new System.Drawing.Size(206, 80);
+            this.TxtPrecios.TabIndex = 24;
+            this.TxtPrecios.Text = "PRECIOS\r\nALIÑADO = $1000 c/u\r\nNO ALIÑADO = $500 c/u\r\nESPECIAL = $2000 c/u";
+            // 
+            // TxtProductosVendidos
+            // 
+            this.TxtProductosVendidos.AutoSize = true;
+            this.TxtProductosVendidos.BackColor = System.Drawing.Color.Transparent;
+            this.TxtProductosVendidos.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtProductosVendidos.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.TxtProductosVendidos.Location = new System.Drawing.Point(813, 341);
+            this.TxtProductosVendidos.Name = "TxtProductosVendidos";
+            this.TxtProductosVendidos.Size = new System.Drawing.Size(368, 33);
+            this.TxtProductosVendidos.TabIndex = 25;
+            this.TxtProductosVendidos.Text = "PRODUCTOS VENDIDOS";
+            // 
+            // richTextProductos
+            // 
+            this.richTextProductos.Location = new System.Drawing.Point(837, 377);
+            this.richTextProductos.Name = "richTextProductos";
+            this.richTextProductos.Size = new System.Drawing.Size(311, 100);
+            this.richTextProductos.TabIndex = 26;
+            this.richTextProductos.Text = "";
+            // 
+            // TxtTotalVentas
+            // 
+            this.TxtTotalVentas.AutoSize = true;
+            this.TxtTotalVentas.BackColor = System.Drawing.Color.Transparent;
+            this.TxtTotalVentas.Font = new System.Drawing.Font("Lucida Bright", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTotalVentas.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.TxtTotalVentas.Location = new System.Drawing.Point(867, 491);
+            this.TxtTotalVentas.Name = "TxtTotalVentas";
+            this.TxtTotalVentas.Size = new System.Drawing.Size(251, 33);
+            this.TxtTotalVentas.TabIndex = 27;
+            this.TxtTotalVentas.Text = "TOTAL VENTAS";
+            // 
+            // richTextBoxTotalVentas
+            // 
+            this.richTextBoxTotalVentas.Location = new System.Drawing.Point(837, 527);
+            this.richTextBoxTotalVentas.Name = "richTextBoxTotalVentas";
+            this.richTextBoxTotalVentas.Size = new System.Drawing.Size(311, 36);
+            this.richTextBoxTotalVentas.TabIndex = 28;
+            this.richTextBoxTotalVentas.Text = "";
+            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1185, 631);
+            this.ClientSize = new System.Drawing.Size(1188, 600);
+            this.Controls.Add(this.richTextBoxTotalVentas);
+            this.Controls.Add(this.TxtTotalVentas);
+            this.Controls.Add(this.richTextProductos);
+            this.Controls.Add(this.TxtProductosVendidos);
+            this.Controls.Add(this.TxtPrecios);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.BtnBorrar);
             this.Controls.Add(this.TxtRegistro);
@@ -384,5 +444,10 @@ namespace OnlyPans
         private System.Windows.Forms.Button BtnBorrar;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Timer Hora;
+        private System.Windows.Forms.Label TxtPrecios;
+        private System.Windows.Forms.Label TxtProductosVendidos;
+        private System.Windows.Forms.RichTextBox richTextProductos;
+        private System.Windows.Forms.Label TxtTotalVentas;
+        private System.Windows.Forms.RichTextBox richTextBoxTotalVentas;
     }
 }

@@ -16,10 +16,10 @@ namespace OnlyPans
         {
             InitializeComponent();
         }
-        public Registro(String text)
+
+        private void BtnCerrarAdmin_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
-            RtextRegistro.Text = text;
+            this.Close();
         }
     }
 }

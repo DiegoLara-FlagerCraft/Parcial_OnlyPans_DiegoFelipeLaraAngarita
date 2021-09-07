@@ -53,10 +53,9 @@ namespace OnlyPans
             richTextRegistro.Text += "REGISTRO \n" + "FECHA: " + DateTimeFecha.Text + "\n" + "HORA: " + TxtHoraR.Text + "\n" + "NOMBRE CLIENTE: " + TxtBoxNombreCliente.Text + "\n" + "CEDULA: " + TxtBoxCedula.Text + "\n"
                 + "TIPO DE PAN: " + comboBoxPanes.Text + "\n" + "CANTIDAD: " + NumericCantidad.Value + "\n" + "TOTAL: " + TextBoxTotal.Text + "\n" + "---------------------------------------------" + "\n";
 
-            String texto = richTextRegistro.Text;
-            Form formulario = new Registro(texto);
-            
+            richTextProductos.Text += comboBoxPanes.Text + "\n";
 
+            richTextBoxTotalVentas.Text = "EL TOTAL DE LAS VENTAS ES: $" + TotalVentas;
         }
 
         private void BtnBorrar_Click(object sender, EventArgs e)
@@ -70,7 +69,7 @@ namespace OnlyPans
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
-            MessageBox.Show("EL TOTAL DE LAS VENTAS FUE: $" + TotalVentas);
+            MessageBox.Show("ONLY PANS A SU SERVICIO");
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
