@@ -37,8 +37,8 @@ namespace OnlyPans
             this.TxtBoxContraseña = new System.Windows.Forms.TextBox();
             this.TxtUsuario = new System.Windows.Forms.Label();
             this.TxtContraseña = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnIngresar = new System.Windows.Forms.Button();
+            this.BtnBorrar = new System.Windows.Forms.Button();
             this.TxtUsuYContra = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxLogo)).BeginInit();
             this.SuspendLayout();
@@ -119,30 +119,31 @@ namespace OnlyPans
             this.TxtContraseña.TabIndex = 6;
             this.TxtContraseña.Text = "CONTRASEÑA";
             // 
-            // button1
+            // BtnIngresar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(297, 329);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 38);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "INGRESAR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BtnIngresar.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIngresar.ForeColor = System.Drawing.Color.White;
+            this.BtnIngresar.Location = new System.Drawing.Point(297, 329);
+            this.BtnIngresar.Name = "BtnIngresar";
+            this.BtnIngresar.Size = new System.Drawing.Size(165, 38);
+            this.BtnIngresar.TabIndex = 7;
+            this.BtnIngresar.Text = "INGRESAR";
+            this.BtnIngresar.UseVisualStyleBackColor = false;
+            this.BtnIngresar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // BtnBorrar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button2.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(516, 329);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 38);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "BORRAR";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BtnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BtnBorrar.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBorrar.ForeColor = System.Drawing.Color.White;
+            this.BtnBorrar.Location = new System.Drawing.Point(516, 329);
+            this.BtnBorrar.Name = "BtnBorrar";
+            this.BtnBorrar.Size = new System.Drawing.Size(165, 38);
+            this.BtnBorrar.TabIndex = 8;
+            this.BtnBorrar.Text = "BORRAR";
+            this.BtnBorrar.UseVisualStyleBackColor = false;
+            this.BtnBorrar.Click += new System.EventHandler(this.button2_Click);
             // 
             // TxtUsuYContra
             // 
@@ -162,8 +163,8 @@ namespace OnlyPans
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(824, 631);
             this.Controls.Add(this.TxtUsuYContra);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnBorrar);
+            this.Controls.Add(this.BtnIngresar);
             this.Controls.Add(this.TxtContraseña);
             this.Controls.Add(this.TxtUsuario);
             this.Controls.Add(this.TxtBoxContraseña);
@@ -188,8 +189,8 @@ namespace OnlyPans
         private System.Windows.Forms.TextBox TxtBoxContraseña;
         private System.Windows.Forms.Label TxtUsuario;
         private System.Windows.Forms.Label TxtContraseña;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnIngresar;
+        private System.Windows.Forms.Button BtnBorrar;
         private System.Windows.Forms.Label TxtUsuYContra;
     }
 }

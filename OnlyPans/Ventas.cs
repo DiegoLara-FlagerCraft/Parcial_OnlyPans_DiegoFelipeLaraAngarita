@@ -19,7 +19,48 @@ namespace OnlyPans
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            TxtHoraR.Text = DateTime.Now.ToString("h:mm:ss");
+            TxtHoraR.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(comboBoxPanes.Text == "ALIÑADO")
+            {
+                decimal total = 1000 * NumericCantidad.Value;
+                string totalcadena = "  $" + total + "";
+                TextBoxTotal.Text = totalcadena;
+            }
+            if (comboBoxPanes.Text == "NO ALIÑADO")
+            {
+                decimal total = 500 * NumericCantidad.Value;
+                string totalcadena = "  $" + total + "";
+                TextBoxTotal.Text = totalcadena;
+            }
+            if (comboBoxPanes.Text == "ESPECIAL")
+            {
+                decimal total = 2000 * NumericCantidad.Value;
+                string totalcadena = "  $" + total + "";
+                TextBoxTotal.Text = totalcadena;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            richTextRegistro.Text += "REGISTRO \n" + "FECHA: " + DateTimeFecha.Text + "\n" + "HORA: " + "\n" + "NOMBRE CLIENTE: " + TxtBoxNombreCliente.Text + "\n" + "CEDULA: " + TxtBoxCedula.Text + "\n"
+                + "TIPO DE PAN: " + comboBoxPanes.Text + "\n" + "CANTIDAD: " + NumericCantidad.Value + "\n" + "TOTAL: " + TextBoxTotal.Text + "\n" + "---------------------------------------------" + "\n";
+        }
+
+        private void BtnBorrar_Click(object sender, EventArgs e)
+        {
+            TxtBoxNombreCliente.Clear();
+            TxtBoxCedula.Clear();
+            NumericCantidad.Value = 0;
+            TextBoxTotal.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

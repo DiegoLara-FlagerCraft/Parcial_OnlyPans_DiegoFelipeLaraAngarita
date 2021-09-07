@@ -30,7 +30,7 @@ namespace OnlyPans
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventas));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.TxtTitilo = new System.Windows.Forms.Label();
             this.TxtVentas = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@ namespace OnlyPans
             this.TxtHora = new System.Windows.Forms.Label();
             this.TxtHoraR = new System.Windows.Forms.Label();
             this.TxtPanes = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxPanes = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtFecha = new System.Windows.Forms.Label();
             this.DateTimeFecha = new System.Windows.Forms.DateTimePicker();
@@ -49,21 +49,23 @@ namespace OnlyPans
             this.TextBoxTotal = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextRegistro = new System.Windows.Forms.RichTextBox();
             this.TxtRegistro = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.BtnBorrar = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericCantidad)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // PictureBoxLogo
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 140);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.PictureBoxLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxLogo.Image")));
+            this.PictureBoxLogo.Location = new System.Drawing.Point(12, 12);
+            this.PictureBoxLogo.Name = "PictureBoxLogo";
+            this.PictureBoxLogo.Size = new System.Drawing.Size(141, 140);
+            this.PictureBoxLogo.TabIndex = 0;
+            this.PictureBoxLogo.TabStop = false;
             // 
             // TxtTitilo
             // 
@@ -165,18 +167,19 @@ namespace OnlyPans
             this.TxtPanes.TabIndex = 10;
             this.TxtPanes.Text = "Tipo de Pan";
             // 
-            // comboBox1
+            // comboBoxPanes
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxPanes.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPanes.FormattingEnabled = true;
+            this.comboBoxPanes.Items.AddRange(new object[] {
             "ALIÑADO",
             "NO ALIÑADO",
-            "ESPECIAL"});
-            this.comboBox1.Location = new System.Drawing.Point(264, 308);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(241, 25);
-            this.comboBox1.TabIndex = 11;
+            "ESPECIAL",
+            ""});
+            this.comboBoxPanes.Location = new System.Drawing.Point(264, 308);
+            this.comboBoxPanes.Name = "comboBoxPanes";
+            this.comboBoxPanes.Size = new System.Drawing.Size(241, 25);
+            this.comboBoxPanes.TabIndex = 11;
             // 
             // label3
             // 
@@ -243,32 +246,34 @@ namespace OnlyPans
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(280, 465);
+            this.button1.Location = new System.Drawing.Point(204, 462);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 38);
             this.button1.TabIndex = 18;
             this.button1.Text = "CALCULAR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button2.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(527, 465);
+            this.button2.Location = new System.Drawing.Point(414, 462);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(165, 38);
             this.button2.TabIndex = 19;
             this.button2.Text = "REGISTRAR";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // richTextBox1
+            // richTextRegistro
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(837, 130);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(311, 489);
-            this.richTextBox1.TabIndex = 20;
-            this.richTextBox1.Text = "";
+            this.richTextRegistro.Location = new System.Drawing.Point(837, 130);
+            this.richTextRegistro.Name = "richTextRegistro";
+            this.richTextRegistro.Size = new System.Drawing.Size(311, 489);
+            this.richTextRegistro.TabIndex = 20;
+            this.richTextRegistro.Text = "";
             // 
             // TxtRegistro
             // 
@@ -282,14 +287,42 @@ namespace OnlyPans
             this.TxtRegistro.TabIndex = 21;
             this.TxtRegistro.Text = "REGISTRO";
             // 
+            // BtnBorrar
+            // 
+            this.BtnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BtnBorrar.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBorrar.ForeColor = System.Drawing.Color.White;
+            this.BtnBorrar.Location = new System.Drawing.Point(618, 462);
+            this.BtnBorrar.Name = "BtnBorrar";
+            this.BtnBorrar.Size = new System.Drawing.Size(165, 38);
+            this.BtnBorrar.TabIndex = 22;
+            this.BtnBorrar.Text = "BORRAR";
+            this.BtnBorrar.UseVisualStyleBackColor = false;
+            this.BtnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button3.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(279, 525);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(434, 38);
+            this.button3.TabIndex = 23;
+            this.button3.Text = "CERRAR SESIÓN";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1185, 631);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.BtnBorrar);
             this.Controls.Add(this.TxtRegistro);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.richTextRegistro);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TextBoxTotal);
@@ -298,7 +331,7 @@ namespace OnlyPans
             this.Controls.Add(this.DateTimeFecha);
             this.Controls.Add(this.TxtFecha);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxPanes);
             this.Controls.Add(this.TxtPanes);
             this.Controls.Add(this.TxtHoraR);
             this.Controls.Add(this.TxtHora);
@@ -308,10 +341,10 @@ namespace OnlyPans
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtVentas);
             this.Controls.Add(this.TxtTitilo);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PictureBoxLogo);
             this.Name = "Ventas";
             this.Text = "Ventas";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -320,7 +353,7 @@ namespace OnlyPans
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PictureBoxLogo;
         private System.Windows.Forms.Label TxtTitilo;
         private System.Windows.Forms.Label TxtVentas;
         private System.Windows.Forms.Label label1;
@@ -330,7 +363,7 @@ namespace OnlyPans
         private System.Windows.Forms.Label TxtHora;
         private System.Windows.Forms.Label TxtHoraR;
         private System.Windows.Forms.Label TxtPanes;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxPanes;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label TxtFecha;
         private System.Windows.Forms.DateTimePicker DateTimeFecha;
@@ -339,7 +372,9 @@ namespace OnlyPans
         private System.Windows.Forms.TextBox TextBoxTotal;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextRegistro;
         private System.Windows.Forms.Label TxtRegistro;
+        private System.Windows.Forms.Button BtnBorrar;
+        private System.Windows.Forms.Button button3;
     }
 }
