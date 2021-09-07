@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace OnlyPans
 {
-    public partial class Form1 : Form
+    public partial class HOME : Form
     {
-        public Form1()
+        public HOME()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TxtBoxUsuario.Clear();
+            TxtBoxContraseña.Clear();
         }
     }
 }
